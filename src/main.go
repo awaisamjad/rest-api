@@ -57,7 +57,7 @@ func main() {
 	router.GET("/data", getData)
 	router.GET("/data/:id", getDataById)
 	getDataByKey("h")
-	router.Run("localhost:8080")
+	router.Run("https://rest-api-0g8j.onrender.com")
 }
 
 func getData(c *gin.Context) {
