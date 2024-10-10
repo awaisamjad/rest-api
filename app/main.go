@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"os"
+	"strings"
+
+	"github.com/gin-gonic/gin"
 	// "github.com/mattn/go-sqlite3"
 	// "database/sql"
 )
@@ -67,7 +69,13 @@ func main() {
 }
 
 func getData(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, dataList)
+	APIKey := c.Request.Header.Get("Authorization")
+	fields := strings.Fields(APIKey)
+	if fields[1] == "AWAISAMJAD" {
+		c.IndentedJSON(http.StatusOK, dataList)
+	} else {
+		c.IndentedJSON(http.StatusForbidden, nil)
+	}
 }
 
 func getDataById(c *gin.Context) {
