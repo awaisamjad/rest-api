@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
 	// "github.com/mattn/go-sqlite3"
 	// "database/sql"
 )
@@ -56,8 +57,13 @@ func main() {
 	router := gin.Default()
 	router.GET("/data", getData)
 	router.GET("/data/:id", getDataById)
-	getDataByKey("h")
-	router.Run("https://rest-api-0g8j.onrender.com")
+	// getDataByKey("h")
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	router.Run("0.0.0.0:" + port)
 }
 
 func getData(c *gin.Context) {
