@@ -1,0 +1,44 @@
+[
+    {
+        "anime": {
+            "name": "Naruto",
+            "year_of_release": "2002",
+            "number_of_episodes": "220",
+            "rating": "8.3"
+        },
+        "album": {
+            "id": "1",
+            "title": "Blue Train",
+            "artist": "John Coltrane",
+            "price": 56.99
+        }
+    },
+    {
+        "anime": {
+            "name": "One Piece",
+            "year_of_release": "1999",
+            "number_of_episodes": "1000+",
+            "rating": "8.7"
+        },
+        "album": {
+            "id": "2",
+            "title": "Jeru",
+            "artist": "Gerry Mulligan",
+            "price": 17.99
+        }
+    },
+    {
+        "anime": {
+            "name": "Attack on Titan",
+            "year_of_release": "2013",
+            "number_of_episodes": "75",
+            "rating": "9.0"
+        },
+        "album": {
+            "id": "3",
+            "title": "Sarah Vaughan and Clifford Brown",
+            "artist": "Sarah Vaughan",
+            "price": 39.99
+        }
+    }
+]
